@@ -68,11 +68,11 @@ def uncollapseAll(images):
         count = 0
         row = []
         for x in range(len(image)):
-            if x % 280 == 0:
+            if x % 200 == 0:
                 row = []
             rgb = image[x]
             row.append(rgb)
-            if (x+1) % 280 == 0:
+            if (x+1) % 200 == 0:
                 count +=1
                 newImage.append(row)
         newImages.append(newImage)
@@ -171,9 +171,9 @@ if __name__ == '__main__':
     print numpy.mean(singleFace)
     eigenImages = uncollapseAll(numpy.array(eigenfaces))
     
-    for i in range(1):
-        cv2.imwrite("eigen"+str(i)+".jpg", eigenImages[i])
+    for i in range(10):
+        cv2.imwrite("pictures/eigencats/eigen"+str(i)+".jpg", eigenImages[i])
         print "Wrote eigen"+str(i)+".jpg"
 
-    celeb1, celeb2 = compare(newCat, imagesGC, eigenfaces, euDist)
-    print "For new cat matches " + names[celeb1] + " and " + names[celeb2]
+    '''mostSimilar, secondMostSimilar = compare(newCat, imagesGC, eigenfaces, euDist)
+    print "For new cat matches " + names[mostSimilar] + " and " + names[secondMostSimilar]'''
