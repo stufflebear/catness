@@ -1,0 +1,20 @@
+{
+  "cat0.jpg": {
+    "eyeLeft": {
+      "x": 327,
+      "y": 201
+    },
+    "eyeRight": {
+      "x": 440,
+      "y": 218
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  }
+}
