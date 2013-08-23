@@ -31,7 +31,7 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-import sys, math, Image
+import sys, math, Image, os
 
 def Distance(p1,p2):
   dx = p2[0] - p1[0]
@@ -82,8 +82,13 @@ def CropFace(image, eye_left=(0,0), eye_right=(0,0), offset_pct=(0.2,0.2), dest_
   return image
 
 if __name__ == "__main__":
-  image =  Image.open("arnie.jpg")
-  CropFace(image, eye_left=(252,364), eye_right=(420,366), offset_pct=(0.1,0.1), dest_sz=(200,200)).save("arnie_10_10_200_200.jpg")
-  CropFace(image, eye_left=(252,364), eye_right=(420,366), offset_pct=(0.2,0.2), dest_sz=(200,200)).save("arnie_20_20_200_200.jpg")
+  if len(sys.argv) < 2:
+    print "Usage: python align.py [raw cat picture] [new cat picture]"
+    sys.exit(0)
+  filename = os.path.split(sys.argv[1])[-1]
+  print filename
+  image =  Image.open(sys.argv[1])
+  CropFace(image, eye_left=(329,275), eye_right=(440,252), offset_pct=(0.1,0.1), dest_sz=(200,200)).save("from_bottom_left.jpg")
+  CropFace(image, eye_left=(327,201), eye_right=(440,218), offset_pct=(0.2,0.2), dest_sz=(200,200)).save("from_top_left.jpg")
   CropFace(image, eye_left=(252,364), eye_right=(420,366), offset_pct=(0.3,0.3), dest_sz=(200,200)).save("arnie_30_30_200_200.jpg")
   CropFace(image, eye_left=(252,364), eye_right=(420,366), offset_pct=(0.2,0.2)).save("arnie_20_20_70_70.jpg")
