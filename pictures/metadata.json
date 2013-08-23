@@ -16,5 +16,275 @@
       "width": 200,
       "height": 200
     }
+  },
+  "cat1.jpg": {
+    "eyeLeft": {
+      "x": 527,
+      "y": 201
+    },
+    "eyeRight": {
+      "x": 668,
+      "y": 756
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat2.jpg": {
+    "eyeLeft": {
+      "x": 1088,
+      "y": 772
+    },
+    "eyeRight": {
+      "x": 1303,
+      "y": 780
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat3.jpg": {
+    "eyeLeft": {
+      "x": 328,
+      "y": 202
+    },
+    "eyeRight": {
+      "x": 439,
+      "y": 221
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat4.jpg": {
+    "eyeLeft": {
+      "x": 386,
+      "y": 389
+    },
+    "eyeRight": {
+      "x": 587,
+      "y": 403
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat06.jpg": {
+    "eyeLeft": {
+      "x": 182,
+      "y": 200
+    },
+    "eyeRight": {
+      "x": 332,
+      "y": 191
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat05.jpg": {
+    "eyeLeft": {
+      "x": 569,
+      "y": 401
+    },
+    "eyeRight": {
+      "x": 746,
+      "y": 403
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat07.jpg": {
+    "eyeLeft": {
+      "x": 91,
+      "y": 111
+    },
+    "eyeRight": {
+      "x": 143,
+      "y": 119
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat8.jpg": {
+    "eyeLeft": {
+      "x": 233,
+      "y": 262
+    },
+    "eyeRight": {
+      "x": 409,
+      "y": 248
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat9.jpg": {
+    "eyeLeft": {
+      "x": 304,
+      "y": 140
+    },
+    "eyeRight": {
+      "x": 374,
+      "y": 130
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat10.jpg": {
+    "eyeLeft": {
+      "x": 222,
+      "y": 274
+    },
+    "eyeRight": {
+      "x": 389,
+      "y": 274
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat11.jpg": {
+    "eyeLeft": {
+      "x": 418,
+      "y": 392
+    },
+    "eyeRight": {
+      "x": 605,
+      "y": 378
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat12.jpg": {
+    "eyeLeft": {
+      "x": 626,
+      "y": 695
+    },
+    "eyeRight": {
+      "x": 963,
+      "y": 696
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat13.jpg": {
+    "eyeLeft": {
+      "x": 412,
+      "y": 356
+    },
+    "eyeRight": {
+      "x": 541,
+      "y": 343
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "cat14.jpg": {
+    "eyeLeft": {
+      "x": 1088,
+      "y": 555
+    },
+    "eyeRight": {
+      "x": 1363,
+      "y": 585
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
+  },
+  "kitten0.jpg": {
+    "eyeLeft": {
+      "x": 548,
+      "y": 360
+    },
+    "eyeRight": {
+      "x": 658,
+      "y": 453
+    },
+    "offsetPct": {
+      "x": 0.1,
+      "y": 0.1
+    },
+    "destSize": {
+      "width": 200,
+      "height": 200
+    }
   }
 }
