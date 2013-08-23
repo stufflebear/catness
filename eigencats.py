@@ -128,14 +128,15 @@ def getEigenFaces(images):
     return eigenfaces
 
 def getPercents(image, eigenfaces):
+    sizes = [i.size for i in eigenfaces]
     percents = [numpy.dot(norm(eigenfaces[i]), image) for i in range(10)]
     return 2*numpy.array(norm(percents))
 
-def compare(student, celebs, eigenfaces, distFn):
-    studPercents = getPercents(student, eigenfaces)
+def compare(newCat, allCats, eigenfaces, distFn):
+    studPercents = getPercents(newCat, eigenfaces)
     dists = []
-    for i in range(len(celebs)):
-        celebPercents = getPercents(celebs[i], eigenfaces)
+    for i in range(len(allCats)):
+        celebPercents = getPercents(allCats[i], eigenfaces)
         dist = distFn(studPercents, celebPercents)
         dists.append(dist)
     min1, val1 = argAndMin(dists)
@@ -156,6 +157,7 @@ def argAndMin(l):
 if __name__ == '__main__':
 
     newCat = cv2.imread(sys.argv[1])
+    catToCompare = numpy.array(greyCollapse([newCat])[0])
 
     catsDir = os.path.abspath(os.path.join(os.curdir, 'pictures/cats'))
 
@@ -175,5 +177,5 @@ if __name__ == '__main__':
         cv2.imwrite("pictures/eigencats/eigen"+str(i)+".jpg", eigenImages[i])
         print "Wrote eigen"+str(i)+".jpg"
 
-    '''mostSimilar, secondMostSimilar = compare(newCat, imagesGC, eigenfaces, euDist)
-    print "For new cat matches " + names[mostSimilar] + " and " + names[secondMostSimilar]'''
+    mostSimilar, secondMostSimilar = compare(catToCompare, imagesGC, eigenfaces, euDist)
+    print "For new cat matches " + names[mostSimilar] + " and " + names[secondMostSimilar]
