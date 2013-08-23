@@ -31,7 +31,9 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-import sys, math, Image, os
+import sys, math, Image, os, json
+from pprint import pprint
+
 
 def Distance(p1,p2):
   dx = p2[0] - p1[0]
@@ -81,10 +83,25 @@ def CropFace(image, eye_left=(0,0), eye_right=(0,0), offset_pct=(0.2,0.2), dest_
   image = image.resize(dest_sz, Image.ANTIALIAS)
   return image
 
+def getMetaData(name):
+  json_data=open("metadata.json")
+  data = json.load(json_data)
+  match = [data[picName] for picName in data if picName == name]
+  json_data.close()
+  if len(match) > 0:
+    info = match[0]
+    return (info["eyeLeft"]["x"], info["eyeLeft"]["y"]), \
+           (info["eyeRight"]["x"], info["eyeRight"]["y"]), \
+           (info["offsetPct"]["x"], info["offsetPct"]["y"]), \
+           (info["destSize"]["width"], info["destSize"]["height"])
+  else:
+    return None
+
 if __name__ == "__main__":
   if len(sys.argv) < 2:
     print "Usage: python align.py [raw cat picture] [new cat picture]"
     sys.exit(0)
   filename = os.path.split(sys.argv[1])[-1]
   image =  Image.open(sys.argv[1])
-  CropFace(image, eye_left=(327,201), eye_right=(440,218), offset_pct=(0.1,0.1), dest_sz=(200,200)).save("cats/" + filename)
+  eye_left, eye_right, offset_pct, dest_sz = getMetaData(filename)
+  CropFace(image, eye_left=eye_left, eye_right=eye_right, offset_pct=offset_pct, dest_sz=dest_sz).save("cats/" + filename)
