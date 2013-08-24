@@ -40,8 +40,8 @@ def getProcessedImages(database):
             name, ext = os.path.splitext(filename)
             if ext in validExt and 'reconstruct' not in name:
                 im = cv2.imread(os.path.join(dirname, filename))
+                allImages.append(im)
                 if 'Average' not in name:
-                    allImages.append(im)
                     names.append(name)
                     sum = sum+im
                     count += 1
@@ -130,7 +130,7 @@ def getEigenFaces(images):
 def getPercents(image, eigenfaces):
     sizes = [i.size for i in eigenfaces]
     percents = [numpy.dot(norm(eigenfaces[i]), image) for i in range(10)]
-    return 2*numpy.array(norm(percents))
+    return 5*numpy.array(norm(percents))
 
 def compare(newCat, allCats, eigenfaces, distFn):
     studPercents = getPercents(newCat, eigenfaces)
@@ -162,15 +162,14 @@ if __name__ == '__main__':
     catsDir = os.path.abspath(os.path.join(os.curdir, 'pictures/cats'))
 
     images, names = getProcessedImages(catsDir)
+    print names
     averageFace = cv2.imread(os.path.join(catsDir, "Average.jpg"))
     averageFace = greyCollapse([averageFace])[0]
     imagesGC = greyCollapse(images)
 
     eigenfaces = getEigenFaces(imagesGC)
     singleFace = eigenfaces[0]
-    print min(singleFace)
-    print max(singleFace)
-    print numpy.mean(singleFace)
+
     eigenImages = uncollapseAll(numpy.array(eigenfaces))
     
     for i in range(10):
@@ -178,4 +177,4 @@ if __name__ == '__main__':
         print "Wrote eigen"+str(i)+".jpg"
 
     mostSimilar, secondMostSimilar = compare(catToCompare, imagesGC, eigenfaces, euDist)
-    print "For new cat matches " + names[mostSimilar] + " and " + names[secondMostSimilar]
+    print sys.argv[1] + " matches " + names[mostSimilar] + " and " + names[secondMostSimilar]
