@@ -1,0 +1,13 @@
+{% extends "catness/base.html" %}
+
+{# Main page for ismycatcute.com #}
+
+{% block content %}
+<h1>Is my cat cute?</h1>
+<p>This only works for cats.</p>
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}

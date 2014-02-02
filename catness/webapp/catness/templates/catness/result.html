@@ -1,0 +1,10 @@
+{% extends "catness/base.html" %}
+
+{% block content %}
+
+<h1>Your cat is...</h1>
+{{ is_cute|safe }}
+
+<p><a href="explanation">How did we get this result?</a></p>
+
+{% endblock %}

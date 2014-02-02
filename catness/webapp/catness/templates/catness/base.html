@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" />
+    <link rel="icon" type="image/ico" href="{{ STATIC_URL }}images/favicon.ico">
+    <title>{% block title %}Is my cat cute?{% endblock %}</title>
+</head>
+
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
