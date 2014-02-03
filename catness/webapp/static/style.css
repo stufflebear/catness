@@ -10,6 +10,14 @@ body {
     height:100%;
 }
 
+#content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 600px;
+    padding: 150px 15px;
+    /*border: #a0a0a0 solid 1px;*/
+}
+
 a:link {color:#e86f59;}
 a:visited {color:#e86f59;}
 a:hover {color:#f5974c;}
