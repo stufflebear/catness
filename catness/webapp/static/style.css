@@ -10,6 +10,11 @@ body {
     height:100%;
 }
 
+a:link {color:#e86f59;}
+a:visited {color:#e86f59;}
+a:hover {color:#f5974c;}
+a:active {color:#f5974c;}
+
 #container {
     min-height:100%;
     position:relative;
