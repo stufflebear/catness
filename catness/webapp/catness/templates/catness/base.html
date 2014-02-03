@@ -2,15 +2,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<div id="container">
+
+  <div id="header">
+    <header>
+    <a>Test</a>
+    </header>
+    
+    <head>
     <link rel="stylesheet" href="{{ STATIC_URL }}style.css" />
     <link rel="icon" type="image/ico" href="{{ STATIC_URL }}images/favicon.ico">
     <title>{% block title %}Is my cat cute?{% endblock %}</title>
-</head>
+    </head>
+  </div>
 
-<body>
-    <div id="content">
+  <div id="body">
+    <body>
+      <div id="content">
         {% block content %}{% endblock %}
-    </div>
-</body>
+      </div>
+    </body>
+  </div>
+
+  <div id="footer">
+    <footer>
+      <p>Created by: Mary Stufflebeam</p>
+    </footer>
+  </div>
+
+</div>
 </html>
