@@ -54,7 +54,7 @@ names, labels, pictures = getCats("catness/pictures/cats/small/")
 model = createModel(pictures, labels)
 
 if __name__ == "__main__":
-    names, labels, pictures = getCats("pictures/cats/small/")
+    names, labels, pictures = getCats("catness/pictures/cats/small/")
     newImage = pictures[4]
     print newImage.shape
     model = createModel(pictures, labels)
@@ -67,4 +67,4 @@ if __name__ == "__main__":
     print "max:", max(allSums)
     print "min:", min(allSums)
     print "avg:", sum(allSums) / len(allSums)
-    print [cuteOrNot(pic, model) for pic in pictures]
+    print [cuteOrNot(pic) for pic in pictures]

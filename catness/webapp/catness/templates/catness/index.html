@@ -4,7 +4,8 @@
 
 {% block content %}
 <h1>Is my cat cute?</h1>
-<p>This only works for cats.</p>
+<p>Upload a picture of your cat to find out. Then enter the x and y pixel
+values for the left and right eyes of the cat.</p>
 
 <form method="post" enctype="multipart/form-data">{% csrf_token %}
 {{ form.as_p }}

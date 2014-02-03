@@ -5,6 +5,7 @@ body {
     background-repeat:no-repeat;
     background-position: bottom;
     text-align: center;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     margin:0;
     padding:0;
     height:100%;
@@ -13,13 +14,19 @@ body {
 #content {
     display: inline-block;
     vertical-align: middle;
-    width: 600px;
+    width: 400px;
     padding: 150px 15px;
     /*border: #a0a0a0 solid 1px;*/
 }
 
-a:link {color:#e86f59;}
-a:visited {color:#e86f59;}
+a:link {
+    color:#e86f59;
+    text-decoration:none;
+}
+a:visited {
+    color:#e86f59;
+    text-decoration:none;
+}
 a:hover {color:#f5974c;}
 a:active {color:#f5974c;}
 

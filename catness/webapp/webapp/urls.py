@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^explanation/', 'catness.views.explanation', name='explanation'),
+    url(r'^about/', 'catness.views.explanation', name='about'),
     url(r'^result/', 'catness.views.result', name='result'),
     url(r'^$', 'catness.views.index', name='index'),
 )

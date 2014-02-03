@@ -30,7 +30,7 @@ def index(request):
             is_cute = cuteOrNot(np_face)
             cuteness = "...not cute. Sorry"
             if is_cute:
-                cuteness = "...adorable!"
+                cuteness = "adorable!"
             return render(request, 'catness/result.html', {
                 'is_cute': str(cuteness)
             })
