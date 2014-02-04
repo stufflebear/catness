@@ -9,6 +9,7 @@ import numpy
 
 
 def index(request):
+    form = CatForm()
     if request.method == 'POST':
         form = CatForm(request.POST, request.FILES)
         if form.is_valid():
@@ -36,7 +37,7 @@ def index(request):
             })
 
     return render(request, 'catness/index.html', {
-        'form': CatForm(),
+        'form': form,
     })
 
 

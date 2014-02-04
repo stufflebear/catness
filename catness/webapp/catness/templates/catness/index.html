@@ -6,9 +6,46 @@
 <h1>Is my cat cute?</h1>
 <p>Upload a picture of your cat to find out. Then enter the x and y pixel
 values for the left and right eyes of the cat.</p>
+<br>
 
 <form method="post" enctype="multipart/form-data">{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="Submit" />
+{{ form.non_field_errors }}
+    <div class="fieldWrapper">
+        <label for="id_picture"></label>
+        {{ form.picture }}
+	{% for error in form.picture.errors %}
+	  {{ error|escape }}
+	{% endfor %}
+    </div>
+    <div class="fieldWrapper">
+        <label for="id_left_eye_x">X pixel value for left eye: </label>
+        {{ form.left_eye_x }}
+        {% for error in form.left_eye_x.errors %}
+	  {{ error|escape }}
+	{% endfor %}
+    </div>
+    <div class="fieldWrapper">
+        <label for="id_left_eye_y">Y pixel value for left eye: </label>
+        {{ form.left_eye_y }}
+        {% for error in form.left_eye_y.errors %}
+	  {{ error|escape }}
+	{% endfor %}
+    </div>
+    <div class="fieldWrapper">
+        <label for="id_right_eye_x">X pixel value for right eye:</label>
+        {{ form.right_eye_x }}
+        {% for error in form.right_eye_x.errors %}
+	  {{ error|escape }}
+	{% endfor %}
+    </div>
+    <div class="fieldWrapper">
+        <label for="id_right_eye_y">Y pixel value for right eye:</label>
+        {{ form.right_eye_y }}
+        {% for error in form.right_eye_y.errors %}
+	  {{ error|escape }}
+	{% endfor %}
+    </div>
+    {{ field.errors }}
+    <p><input type="submit" value="Submit" /></p>
 </form>
 {% endblock %}
