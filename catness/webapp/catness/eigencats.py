@@ -4,7 +4,6 @@ from os.path import isfile, join
 import numpy
 from PIL import Image
 from scipy.spatial.distance import cosine
-import matplotlib.pyplot as plt
 
 
 def getCats(folder):
