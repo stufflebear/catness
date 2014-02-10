@@ -47,3 +47,6 @@ def result(request):
 
 def explanation(request):
     return render(request, 'catness/explanation.html', {'data': 'data'})
+
+def show404(request):
+    return render(request, 'catness/404.html', {})

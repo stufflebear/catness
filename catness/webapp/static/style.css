@@ -1,9 +1,14 @@
 html,
 
 body {
-    background-image:url('images/lonely_cat.jpg');
-    background-repeat:no-repeat;
-    background-position: bottom;
+    background: url('images/lonely_cat.jpg') no-repeat center center fixed;
+    background-color:#e64b43; /* Top red of the sky */
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/lonely_cat.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/lonely_cat', sizingMethod='scale');
     text-align: center;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     margin:0;
