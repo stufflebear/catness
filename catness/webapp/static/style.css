@@ -2,7 +2,6 @@ html,
 
 body {
     background: url('images/lonely_cat.jpg') no-repeat center center fixed;
-    background-color:#e64b43; /* Top red of the sky */
     webkit-background-size: cover;
     moz-background-size: cover;
     o-background-size: cover;
