@@ -1,9 +1,8 @@
-import cv2, cv
-from os import listdir
-from os.path import isfile, join
-import numpy
-from PIL import Image
 from scipy.spatial.distance import cosine
+from PIL import Image
+from os import listdir
+import numpy
+import cv2
 
 
 def getCats(folder):

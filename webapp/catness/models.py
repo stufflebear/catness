@@ -1,6 +1,7 @@
-from django.db import models
+# from django.core.files.uploadedfile import SimpleUploadedFile
+# from django.db import models
 from django import forms
-from django.core.files.uploadedfile import SimpleUploadedFile
+
 
 class CatForm(forms.Form):
     picture = forms.ImageField()

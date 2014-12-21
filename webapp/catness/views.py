@@ -1,5 +1,5 @@
-from django.http import HttpResponse, HttpResponseRedirect
-from django.template import RequestContext
+# from django.http import HttpResponse, HttpResponseRedirect
+# from django.template import RequestContext
 from django.shortcuts import render
 from models import CatForm
 from PIL import Image
@@ -47,6 +47,7 @@ def result(request):
 
 def explanation(request):
     return render(request, 'catness/explanation.html', {'data': 'data'})
+
 
 def show404(request):
     return render(request, 'catness/404.html', {})
