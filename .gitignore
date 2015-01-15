@@ -34,6 +34,8 @@ nosetests.xml
 .project
 .pydevproject
 
+db.sqlite3
+
 .DS_Store
 
 CAT_DATASET*
